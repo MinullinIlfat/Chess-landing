@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Merriweather-Regular;
+    src: url("fonts/Merriweather-Regular.ttf");
+}
+
+@font-face {
+    font-family: Merriweather-Bold;
+    src: url("fonts/Merriweather-Bold.ttf");
+}
+
+@font-face {
+    font-family: GolosText-Regular;
+    src: url("fonts/GolosText-Regular.ttf");
+}
+
+@font-face {
+    font-family: GolosText-Medium;
+    src: url("fonts/GolosText-Medium.ttf");
+}
+
+@font-face {
+    font-family: GolosText-DemiBold;
+    src: url("fonts/Golos-Text_DemiBold.ttf");
+}
+
+body {
+    font-family: Merriweather-Regular, sans-serif;
+    font-weight: 400;
+    color: #313131;
+}
+
+.first {
+    background-image: url("images/main-bg.png");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-top: 26px;
+    padding-bottom: 130px;
+    position: relative;
+}
+
+.header {
+    margin-bottom: 62px;
+}
+
+.container {
+    max-width: 1222px;
+    margin: 0 auto;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.first-main-title {
+    max-width: 542px;
+    font-size: 60px;
+    line-height: 66px;
+    margin-bottom: 24px;
+}
+
+.first-main-title div {
+    text-align: center;
+}
+
+.first-main-description {
+    max-width: 542px;
+    font-family: GolosText-Regular, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.first-main-active {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 542px;
+}
+
+.button {
+    width: 263px;
+    height: 72px;
+    padding: 20px;
+    border-radius: 66px;
+    box-sizing: border-box;
+    background: #1F1F1F;
+    font-family: GolosText-Medium, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+}
+
+.button:hover {
+    background: #FBCE51;
+    color: #1F1F1F;
+}
+
+.button-transparent {
+    background: transparent;
+    color: #1F1F1F;
+    border: 2px solid #1F1F1F;
+}
+
+.button-transparent:hover {
+    background: #1F1F1F;
+    color: white;
+}
+
+.ticker {
+    background: #F54932;
+    padding: 18px 0;
+    /*overflow: hidden;*/
+}
+
+.ticker ul {
+    display: flex;
+    align-items: center;
+}
+
+.ticker ul li {
+    font-family: Merriweather-Regular, sans-serif, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: white;
+    margin-right: 30px;
+    line-height: 24.2px;
+}
+
+.ticker ul li:last-child {
+    margin-right: 0;
+}
+
+.main {
+    padding: 80px 140px;
+}
+
+.main-head {
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-head-title {
+    max-width: 764px;
+}
+
+.main-head-title, .main-info-text-title {
+    max-width: 764px;
+    font-family: Merriweather-Regular, sans-serif, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 48.6px;
+}
+
+.main-head-title span, .main-info-text-title span {
+    font-family: Merriweather-Bold, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48.6px;
+    color: #F54932;
+}
+
+.main-info {
+    margin-bottom: 200px;
+    display: flex;
+}
+
+.main-info-image {
+    margin-right: 44px;
+}
+
+.main-info-text-title {
+    margin-bottom: 60px;
+}
+
+.main-info-text-table {
+    margin-bottom: 48px;
+}
+
+.left-td {
+    font-family: GolosText-Regular, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 16px 16px 16px 0;
+    border-bottom: 2px solid #D0D0D0;
+}
+
+
+.right-td {
+    font-family: GolosText-DemiBold, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 16px;
+    border-bottom: 2px solid #D0D0D0;
+    border-left: 2px solid #D0D0D0;
+}
+
+.first-left-td, .first-right-td {
+    padding-top: 0;
+}
+
+.last-right-td, .last-left-td {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.last-right-td {
+    position: relative;
+}
+
+.last-right-td div {
+    width: 81px;
+    height: 2px;
+    background: #F54932;
+    display: inline-block;
+    position: absolute;
+    left: 14.5px;
+    top: 30px;
+}
+
+.main-info-link a {
+    text-decoration: none;
+    font-family: GolosText-Regular, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #3057A2;
+    cursor: pointer;
+}
+
+.stages {
+    margin-bottom: 200px;
+}
+
+.stages-title {
+    font-family: Merriweather-Regular, sans-serif;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 64.8px;
+    max-width: 806px;
+    margin-bottom: 64px;
+}
+
+.stages-title a {
+    font-family: GolosText-Regular, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #3057A2;
+    text-decoration: none;
+    display: inline-block;
+    max-width: 280px;
+}
+
+.stages-items {
+    display: grid;
+    grid-template-columns: repeat(3, 394px);
+    grid-template-rows: repeat(3, 112px);
+    gap: 20px;
+}
+
+.stages-item {
+    background-image: url("images/bg-items.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.stages-item:nth-child(3) {
+    grid-row: 1/3;
+    grid-column: 3/4;
+}
+
+.stages-item:nth-child(6) {
+    height: 136px;
+}
+
+.stages-item:last-child {
+    grid-row: 3/4;
+    grid-column: 2/4;
+    height: 136px;
+}
+
+.stages-item:last-child .stages-item-description {
+    max-width: 411px;
+}
+
+.stages-item-number {
+    margin-right: 16px;
+    border-radius: 50%;
+    background: white;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: GolosText-DemiBold, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.stages-item-description {
+    font-family: GolosText-Medium, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.last-stage {
+    position: relative;
+}
+
+.stages-item-description-image {
+    position: absolute;
+    top: -99px;
+    right: -62px;
+}
+
+.slider {
+    margin-bottom: 140px;
+}
+
+.slider-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.slider-title-text {
+    font-family: Merriweather-Regular, sans-serif;
+    font-size: 54px;
+    font-weight: 400;
+}
+
+.slider-title-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-title-arrow {
+    background: black;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    border: 0;
+}
+
+.slider-title-arrow svg {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+}
+.slider-title-arrow:last-child svg {
+    left: 17px;
+}
+
+.slider-title-arrow:hover {
+    background: #FBCE51;
+}
+.slider-title-arrow.disabled {
+    background: #D6D6D6;
+    cursor: not-allowed;
+}
+
+.slider-title-page {
+    font-family: GolosText-Regular, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 14px;
+    margin-left: 14px;
+}
+
+.slider-title-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    /*transition: transform 0.5s ease-in-out;*/
+}
+
+.slider-title-item {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 37px;
+    padding-right: 37px;
+}
+
+
+.slider-title-item-name {
+    font-family: GolosText-DemiBold, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
+.slider-title-item-description {
+    font-family: GolosText-Regular, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.button-small {
+    width: 113px;
+    height: 35px;
+    padding: 12px;
+    box-sizing: border-box;
+    color: #3057A2;
+    border: 1px solid #3057A2;
+    background: white;
+}
+
+.button-small:hover {
+    color: white;
+    border: 0;
+    background: #3057A2;
+}
+
+.footer {
+    padding: 40px 0;
+    background: #E9DED4;
+}
+
+.footer-description {
+    font-family: GolosText-Regular, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+}
