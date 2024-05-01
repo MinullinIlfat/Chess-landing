@@ -1,11 +1,12 @@
 @media (max-width: 376px) {
     .first {
-        /*background-image: url("images/main-bg.png");*/
-        /*background-size: cover;*/
-        /*background-position: bottom;*/
-        /*background-repeat: no-repeat;*/
+        background-image: url("images/main-mobile.png");
+        background-size: auto;
+        background-position: bottom;
+        background-repeat: no-repeat;
         padding-top: 18px;
         padding-bottom: 291px;
+        background-color: #E9DED4;
     }
 
     .header {
@@ -46,6 +47,7 @@
 
     .button-transparent {
         background: white;
+        opacity: 90%;
         border: 0;
     }
 
@@ -64,7 +66,7 @@
 
     .main-head {
         max-width: 336px;
-        margin-bottom: 24px;
+        margin-bottom: 34px;
         display: flex;
         flex-direction: column;
         justify-content: unset;
@@ -78,18 +80,24 @@
         line-height: 37.8px;
     }
 
+    .main-head-title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-head-title p, .main-head-title span {
+        order: 2;
+    }
+
     .main-head-title span, .main-info-text-title span {
         font-size: 28px;
         line-height: 37.8px;
     }
 
-    .main-head-image {
-        margin-bottom: 34px;
-    }
-
-    .main-head-image img {
-        width: 336px;
+    .main-head-title img {
+        width: 335px;
         height: 212px;
+        margin-bottom: 24px;
     }
 
     .main-info {
@@ -122,6 +130,29 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        padding-top: 16px;
+    }
+
+    .main-info-text-table tr:first-child {
+        padding-top: 0;
+    }
+
+    .main-info-text-table tr:nth-child(4) {
+        display: flex;
+        flex-direction: unset;
+        align-items: center;
+        border-bottom: 2px solid #D0D0D0;
+        padding-bottom: 16px;
+    }
+
+    .main-info-text-table tr:nth-child(4) td:last-child {
+        margin-left: 12px;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .main-info-text-table tr:nth-child(4) td:first-child {
+        margin-bottom: 0;
     }
 
     .left-td {
@@ -159,22 +190,55 @@
     .stages-title a {
         font-size: 18px;
         line-height: 21.6px;
+        margin-top: 12px;
         margin-bottom: 148px;
     }
 
     .stages-items {
-        display: flex;
+        display: grid;
         overflow: hidden;
+        grid-template-columns: repeat(5, 335px);
+        grid-template-rows: repeat(2, 150px);
+        gap: 0;
+        column-gap: 40px;
+        margin-bottom: 28px;
     }
 
     .stages-item {
-        width: 335px;
-        height: 300px;
-        min-height: 300px;
-        min-width: 335px;
         box-sizing: border-box;
         padding: 62px 24px 0 20px;
-        margin-bottom: 28px;
+    }
+
+    .stages-item:nth-child(1) {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    .stages-item:nth-child(2) {
+        padding-top: 28px;
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .stages-item:nth-child(4) {
+        grid-row: 1/2;
+        grid-column: 4/5;
+    }
+
+    .stages-item:nth-child(5) {
+        padding-top: 28px;
+        grid-row: 2/3;
+        grid-column: 4/5;
+    }
+
+    .stages-item:nth-child(6) {
+        grid-row: 1/3;
+        grid-column: 5/6;
+    }
+
+    .stages-item:nth-child(7) {
+        grid-row: 1/3;
+        grid-column: 6/7;
     }
 
     .stages-item-description {
@@ -198,6 +262,7 @@
 
     .slider-title-arrows.arrows-airplane {
         position: unset;
+        display: flex;
     }
 
     .slider-title-page.page-airplane {
@@ -258,11 +323,12 @@
     }
 
 
-    .slider-title-items {
+    .slider-items {
         gap: 32px;
+        transition: transform 3s ease-in-out;
     }
 
-    .slider-title-item {
+    .slider-item {
         margin-right: 0;
         padding-left: 24px;
         padding-right: 26px;
@@ -270,27 +336,27 @@
         box-sizing: border-box;
     }
 
-    .slider-title-item-description {
+    .slider-item-description {
         width: 286px;
     }
 
-    .slider-title-item-image {
+    .slider-item-image {
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .slider-title-item-image img {
+    .slider-item-image img {
         width: 244px;
         height: 244px;
     }
 
-    .slider-title-item-name {
+    .slider-item-name {
         margin-top: 28px;
         margin-bottom: 8px;
     }
 
-    .slider-title-item-active {
+    .slider-item-active {
         margin-bottom: 40px;
     }
 

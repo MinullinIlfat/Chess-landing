@@ -63,6 +63,7 @@ body {
     line-height: 66px;
     margin-bottom: 24px;
     font-weight: 400;
+    text-transform: uppercase;
 }
 
 .first-main-title div {
@@ -103,6 +104,8 @@ body {
     align-items: center;
     cursor: pointer;
     border: 0;
+    text-decoration: none;
+    text-align: center;
 }
 
 .button:hover {
@@ -140,6 +143,7 @@ body {
     color: white;
     margin-right: 30px;
     line-height: 24.2px;
+    text-transform: uppercase;
 }
 
 .ticker ul li:last-child {
@@ -163,6 +167,7 @@ body {
     font-size: 36px;
     font-weight: 400;
     line-height: 48.6px;
+    text-transform: uppercase;
 }
 
 .main-head-title span, .main-info-text-title span {
@@ -171,6 +176,10 @@ body {
     font-weight: 700;
     line-height: 48.6px;
     color: #F54932;
+}
+
+.main-head-title p {
+    display: inline;
 }
 
 .main-info {
@@ -263,6 +272,10 @@ body {
     max-width: 280px;
 }
 
+.stages-title span {
+    text-transform: uppercase;
+}
+
 .stages-items {
     display: grid;
     grid-template-columns: repeat(3, 394px);
@@ -340,6 +353,7 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 60px;
+    text-transform: uppercase;
 }
 
 .slider-title-text {
@@ -352,6 +366,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.slider-title-arrows.arrows-airplane {
+    display: none;
 }
 
 .slider-title-arrow {
@@ -394,15 +412,28 @@ body {
     margin-left: 14px;
 }
 
-.slider-title-items {
+.slider-items {
     display: flex;
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    /*transition: transform 0.5s ease-in-out;*/
 }
 
-.slider-title-item {
+.slider-title-arrow:active + .slider-item {
+    animation-duration: 3s;
+    animation-name: slider__item-autoplay_count_3;
+}
+
+@keyframes slider__item-autoplay_count_3
+{
+    0%{opacity:0;}
+    10%{opacity:1;}
+    33% {opacity:1;}
+    43% {opacity:0;}
+    100%{opacity:0;}
+}
+
+.slider-item {
     margin-right: 20px;
     display: flex;
     flex-direction: column;
@@ -411,7 +442,7 @@ body {
     padding-right: 37px;
 }
 
-.slider-title-item-name {
+.slider-item-name {
     font-family: GolosText-DemiBold, sans-serif;
     font-size: 24px;
     font-weight: 600;
@@ -419,7 +450,7 @@ body {
     margin-bottom: 6px;
 }
 
-.slider-title-item-description {
+.slider-item-description {
     font-family: GolosText-Regular, sans-serif;
     font-size: 20px;
     font-weight: 400;
