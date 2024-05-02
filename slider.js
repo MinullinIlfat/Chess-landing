@@ -47,40 +47,34 @@ function showNextSlide() {
 
     if (page !== itemsCount) {
         page++;
-        btnPrev.classList.remove('disabled');
         btnPrev.addEventListener('click', showPreviousSlide);
-    }
-
-    showPages();
-    setPosition();
-
-    if (page === itemsCount) {
-        btnNext.classList.add('disabled');
-        btnNext.removeEventListener('click', showNextSlide);
-        return;
     }
 
     showPages();
     setPosition();
 }
 
+let timerId = setInterval(() => {
+    if (page !== 6) {
+        showNextSlide()
+    } else if (page === 6) {
+        if (window.matchMedia("(min-width: 376px)").matches) {
+            page = 2;
+            position = 407.3333333333333
+        } else {
+            page = 0;
+            position = 336
+        }
+        showNextSlide()
+    }
+}, 4000);
 function showPreviousSlide() {
     const itemsLeft = Math.abs(position) / itemWidth;
 
     position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
     if (page !== minPage) {
         page--;
-        btnNext.classList.remove('disabled');
         btnNext.addEventListener('click', showNextSlide);
-    }
-
-    showPages();
-    setPosition();
-
-    if (page === minPage) {
-        btnPrev.className = 'slider-title-arrow prev-button disabled';
-        btnPrev.removeEventListener('click', showPreviousSlide);
-        return;
     }
 
     showPages();
