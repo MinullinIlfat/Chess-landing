@@ -75,17 +75,29 @@
 
     .main-head-title, .main-info-text-title {
         max-width: 764px;
-        margin-bottom: 24px;
         font-size: 28px;
         line-height: 37.8px;
     }
 
     .main-head-title {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-rows: auto;
+        padding-top: 0;
     }
 
-    .main-head-title p, .main-head-title span {
+    .main-head-title p {
+        grid-row: 1/2;
+    }
+
+    .main-head-title .second-p {
+        grid-row: 3/4;
+    }
+
+    .main-head-title span {
+        grid-row: 4/5;
+    }
+
+    .main-head-title .second-p, .main-head-title span {
         order: 2;
     }
 
@@ -95,9 +107,12 @@
     }
 
     .main-head-title img {
+        position: unset;
         width: 335px;
         height: 212px;
         margin-bottom: 24px;
+        margin-top: 24px;
+        grid-row: 2/3;
     }
 
     .main-info {
@@ -265,7 +280,7 @@
         display: flex;
     }
 
-    .slider-title-page.page-airplane {
+    .slider-title-pagination {
         display: flex;
         align-items: center;
         margin-left: 16px;
